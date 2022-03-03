@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    <h3>Cognito 도메인에 쏘는 방식</h3>
+    <form action="https://jihost.auth.ap-northeast-2.amazoncognito.com/login?client_id=7m6u4j1iv8pelveiq12lneo2f0&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=http://localhost:8080/callback">
+        <input type="text" name="username" placeholder="username">
+        <input type="password" name="password" placeholder="password">
+        <input type="submit" value="LOGIN">
+    </form>
+    <hr>
+    <h3>현재 도메인에 쏘는 방식</h3>
+    <form action="/login?client_id=7m6u4j1iv8pelveiq12lneo2f0&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=http://localhost:8080/callback">
+        <input type="text" name="username" placeholder="username">
+        <input type="password" name="password" placeholder="password">
+        <input type="submit" value="LOGIN">
+    </form>
+</body>
+</html>
